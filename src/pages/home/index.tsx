@@ -2,7 +2,8 @@ import { FC } from "react";
 
 const HomePage: FC = () => (
   <div>
-    <h1>Welcome to the new HyFyn</h1>
+    <img className="App-logo" src="logo.jpg" alt="HyFyn Logo" />
+    <h1>Coming Soon</h1>
   </div>
 );
 
