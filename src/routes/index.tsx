@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "pages/home";
 import Repos from "pages/repos";
 import Projects from "pages/projects";
@@ -7,6 +7,7 @@ import PageNotFound from "pages/404";
 const Routes: FC = () => {
   return (
     <Router>
+      <Link to="/repos">repos</Link>
       <Switch>
         <Route path="/project/:id">
           <Projects />
