@@ -1,15 +1,11 @@
 import React from "react";
-
-import MainLayout from "layout/main";
-import HomePage from "pages/home";
+import Routes from "../routes";
 import "./styles/App.css";
 
 function App() {
   return (
     <div className="App">
-      <MainLayout>
-        <HomePage />
-      </MainLayout>
+      <Routes />
     </div>
   );
 }

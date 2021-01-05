@@ -1,10 +1,12 @@
 import { FC } from "react";
+import Logo from "components/atoms/logo";
+import MainLayout from "layout/main";
 
 const HomePage: FC = () => (
-  <div>
-    <img className="App-logo" src="logo.jpg" alt="HyFyn Logo" />
+  <MainLayout>
+    <Logo />
     <h1>Coming Soon</h1>
-  </div>
+  </MainLayout>
 );
 
 export default HomePage;
