@@ -1,5 +1,5 @@
 import { FC } from "react";
-
+import { uid } from "utils";
 import "./styles/listitems.css";
 export interface ListItemsProps {
   type: "ul" | "ol" | "dl";
@@ -9,7 +9,7 @@ export interface ListItemsProps {
 
 const ListItems: FC<ListItemsProps> = ({ classes, type, items }) => {
   // use the builder pattern for creating all variations of lists (OL, UL, DL)
-  const listItems = items.map((item) => <li>{item}</li>);
+  const listItems = items.map((item, i) => <li key={i + uid()}>{item}</li>);
   let listType;
   switch (type) {
     case "dl":
