@@ -11,7 +11,7 @@ import Nav from "components/molecules/nav";
 const Routes: FC = () => {
   return (
     <Router>
-      <Nav />
+      {process.env.NODE_ENV !== "production" ? <Nav /> : null}
       <Switch>
         <Route path="/project/:id" component={Projects} />
         <Route path="/about" component={About} />
