@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useQuery, gql } from "@apollo/client";
 import MainLayout from "layout/main";
-
+import DoughnutChart from "components/atoms/charts/doughnut";
 const EXCHANGE_RATES = gql`
   query GetUserRepos {
     user(login: "MSobieray") {
@@ -31,6 +31,17 @@ interface Currency {
   name: string;
   url: string;
 }
+const mockGraphData = {
+  labels: ["Red", "Green", "Yellow"],
+  datasets: [
+    {
+      data: [300, 50, 100],
+      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+      hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+    },
+  ],
+};
+
 const Repos: FC = () => {
   const { loading, error, data } = useQuery(EXCHANGE_RATES);
   return (
@@ -44,6 +55,7 @@ const Repos: FC = () => {
             {data.user.repositories.nodes.map(({ name, url }: Currency) => (
               <li key={name}>
                 <a href={url}>{name}</a>
+                <DoughnutChart data={mockGraphData} />
               </li>
             ))}
           </ul>
