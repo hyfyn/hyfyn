@@ -1,6 +1,9 @@
 import { FC } from "react";
 import { uid } from "utils";
-import "./styles/listitems.css";
+
+//Atoms
+import { UList, DList } from "../index";
+
 export interface ListItemsProps {
   type: "ul" | "ol" | "dl";
   items: any[];
@@ -13,13 +16,13 @@ const ListItems: FC<ListItemsProps> = ({ classes, type, items }) => {
   let listType;
   switch (type) {
     case "dl":
-      listType = <dl className={`dl ${classes}`}>{listItems}</dl>;
+      listType = <DList className={`dl ${classes}`}>{listItems}</DList>;
       break;
     case "ol":
       listType = <ol className={`ol ${classes}`}>{listItems}</ol>;
       break;
     default:
-      listType = <ul className={`ul ${classes}`}>{listItems}</ul>;
+      listType = <UList className={`ul ${classes}`}>{listItems}</UList>;
       break;
   }
   return listType;

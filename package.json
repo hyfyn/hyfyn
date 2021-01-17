@@ -30,10 +30,10 @@
     "workbox-streams": "^5.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": " eject"
   },
   "eslintConfig": {
     "extends": [
@@ -54,7 +54,12 @@
     ]
   },
   "devDependencies": {
+    "@emotion/babel-plugin": "^11.1.2",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
     "@types/react-router-dom": "^5.1.7",
-    "postcss-normalize": "^9.0.0"
+    "customize-cra": "^1.0.0",
+    "postcss-normalize": "^9.0.0",
+    "react-app-rewired": "^2.1.8"
   }
 }
