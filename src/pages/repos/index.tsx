@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { useQuery, gql } from "@apollo/client";
 import MainLayout from "layout/main";
+import Card from "components/atoms/card";
+import Grid from "components/atoms/grid";
 import DoughnutChart from "components/atoms/charts/doughnut";
 //  Can I Import Types from chart js and clean up the below typings?
 
@@ -23,6 +25,7 @@ type Language = {
 interface Repository {
   name: string;
   url: string;
+  description: string;
   languages: Language;
 }
 
@@ -61,6 +64,7 @@ const EXCHANGE_RATES = gql`
         nodes {
           name
           url
+          description
           languages(first: 5) {
             totalSize
             totalCount
@@ -110,14 +114,22 @@ const Repos: FC = () => {
       {!loading && !error ? (
         <div>
           <h1>List of my Repos Queried from GraphQL</h1>
-          <ul>
-            {data?.user.repositories.nodes.map(({ name, url, languages }) => (
-              <li key={name}>
-                <a href={url}>{name}</a>
-                <DoughnutChart data={createGraph(languages)} />
-              </li>
-            ))}
-          </ul>
+          {/* TODO: create a grid of cards with repo data and description */}
+
+          {data?.user.repositories.nodes.map(
+            ({ description, name, url, languages }) => (
+              <Card key={name} title={`${description} (${name})`} url={url}>
+                <Grid>
+                  <div>
+                    <DoughnutChart data={createGraph(languages)} />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </Grid>
+              </Card>
+            )
+          )}
         </div>
       ) : null}
     </MainLayout>
