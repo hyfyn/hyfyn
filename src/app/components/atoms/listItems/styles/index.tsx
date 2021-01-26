@@ -1,18 +1,18 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-const styles = css`
+const base = css`
   list-style: none;
   margin: 0;
   li {
     display: inline;
+    padding: 0.5rem;
   }
 `;
 
 const UList = styled.ul(
+  base,
   ({ theme }) => css`
-    ${styles}
-    background-color: ${theme.color.gold};
     &.nav {
       display: flex;
       justify-content: center;
@@ -21,6 +21,9 @@ const UList = styled.ul(
       width: 100%;
       background-color: ${theme.color.gold};
       padding: 1rem;
+      li {
+        padding: 0;
+      }
       li a {
         color: ${theme.color.black};
         text-decoration: none;
@@ -37,9 +40,15 @@ const UList = styled.ul(
   `
 );
 
-const DList = styled.dl(
+const DList = styled.dl(base, ({ theme }) => css``);
+
+const OList = styled.ol(
   ({ theme }) => css`
-    ${styles}
+    li {
+      text-align: left;
+      text-transform: capitalize;
+    }
   `
 );
-export { UList, DList };
+
+export { OList, DList, UList };
