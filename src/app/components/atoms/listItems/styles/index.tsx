@@ -32,8 +32,7 @@ const UList = styled.ul(
           background-color: ${theme.color.lightGold};
         }
         &.active {
-          background-color: white;
-          color: black;
+          background-color: ${theme.color.white};
         }
       }
     }
