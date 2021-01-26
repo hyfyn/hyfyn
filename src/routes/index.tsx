@@ -7,7 +7,7 @@ import Repos from "pages/repos";
 import PageNotFound from "pages/404";
 import Projects from "pages/projects";
 
-import Nav from "components/molecules/nav";
+import Nav from "app/components/molecules/nav";
 const Routes: FC = () => {
   return (
     <Router>
