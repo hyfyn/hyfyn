@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import ListItems from "components/atoms/listItems";
+import ListItems from "app/components/atoms/listItems";
 
 export interface NavProps {}
 
