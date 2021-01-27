@@ -1,5 +1,5 @@
 import { FC } from "react";
-import MainLayout from "layout/main";
+import MainLayout from "app/layout/main";
 export interface PageNotFoundProps {}
 
 const PageNotFound: FC = () => {

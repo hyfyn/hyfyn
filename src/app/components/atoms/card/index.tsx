@@ -1,5 +1,7 @@
 import { FC } from "react";
-import "./styles/index.css";
+
+import * as Styled from "./styles";
+
 export interface CardProps {
   children: React.ReactNode;
   title: string;
@@ -8,12 +10,12 @@ export interface CardProps {
 
 const Card: FC<CardProps> = ({ children, title, url }) => {
   return (
-    <div className="card">
-      <div className="card__title">
+    <Styled.Card>
+      <Styled.CardTitle>
         <a href={url}>{title}</a>
-      </div>
+      </Styled.CardTitle>
       <div className="card__content">{children}</div>
-    </div>
+    </Styled.Card>
   );
 };
 

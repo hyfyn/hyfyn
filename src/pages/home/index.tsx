@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Logo from "app/components/atoms/logo";
-import MainLayout from "layout/main";
+import MainLayout from "app/layout/main";
 
 const HomePage: FC = () => (
   <MainLayout>

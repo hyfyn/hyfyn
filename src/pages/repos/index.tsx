@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { useQuery, gql } from "@apollo/client";
-import MainLayout from "layout/main";
-import Card from "components/atoms/card";
-import Grid from "components/atoms/grid";
-import DoughnutChart from "components/atoms/charts/doughnut";
+import MainLayout from "app/layout/main";
+import Card from "app/components/atoms/card";
+import Grid from "app/components/atoms/grid";
+import DoughnutChart from "app/components/atoms/charts/doughnut";
 //  Can I Import Types from chart js and clean up the below typings?
 
 // export interface reposProps {}
@@ -114,7 +114,6 @@ const Repos: FC = () => {
       {!loading && !error ? (
         <div>
           <h1>List of my Repos Queried from GraphQL</h1>
-          {/* TODO: create a grid of cards with repo data and description */}
 
           {data?.user.repositories.nodes.map(
             ({ description, name, url, languages }) => (

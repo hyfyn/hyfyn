@@ -8,5 +8,13 @@ declare module "@emotion/react" {
       white: string;
       black: string;
     };
+    padding: {
+      base: string;
+    };
+    transition: {
+      slow: string;
+      fast: string;
+      base: string;
+    };
   }
 }

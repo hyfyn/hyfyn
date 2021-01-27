@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useParams } from "react-router-dom";
 
-import MainLayout from "layout/main";
+import MainLayout from "app/layout/main";
 interface ParamTypes {
   id: string;
 }

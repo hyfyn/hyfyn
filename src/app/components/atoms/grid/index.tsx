@@ -1,9 +1,10 @@
 import { FC } from "react";
-import "./styles/index.css";
+
+import * as Styled from "./styles";
 export interface GridProps {}
 
 const Grid: FC<GridProps> = ({ children }) => {
-  return <div className="grid-2-col">{children}</div>;
+  return <Styled.Grid>{children}</Styled.Grid>;
 };
 
 export default Grid;
