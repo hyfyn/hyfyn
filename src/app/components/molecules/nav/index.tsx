@@ -1,37 +1,35 @@
 import { FC } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 import ListItems from "app/components/atoms/listItems";
 
 export interface NavProps {}
 
 const Nav: FC = () => {
-  const location = useLocation();
-  const isActive = () => {
-    return location.pathname.split("/")[1];
-  };
+  const router = useRouter();
+  const { pathname } = router;
+  console.log(pathname);
   return (
     <ListItems
       type="ul"
       items={[
-        <Link className={isActive() === "" ? "active" : undefined} to="/">
-          Home
-        </Link>,
+        <Link href="/">Home</Link>,
         <Link
-          className={isActive() === "about" ? "active" : undefined}
-          to="/about"
+          href="/about"
+          className={pathname === "/about" ? "active" : undefined}
         >
           About
         </Link>,
         <Link
-          className={isActive() === "repos" ? "active" : undefined}
-          to="/repos"
+          href="/repos"
+          className={pathname === "/repos" ? "active" : undefined}
         >
           Repos
         </Link>,
         <Link
-          className={isActive() === "project" ? "active" : undefined}
-          to="/project/1"
+          href="/projects"
+          className={pathname === "/projects" ? "active" : undefined}
         >
           Projects
         </Link>,
