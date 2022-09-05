@@ -1,7 +1,8 @@
 import { FC } from "react";
+import { MainLayout } from "../css/main"
 
 const mainLayout: FC = ({ children }) => (
-  <header className="App-header">{children}</header>
+  <MainLayout className="App">{children}</MainLayout>
 );
 
 export default mainLayout;

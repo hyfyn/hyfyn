@@ -1,7 +1,5 @@
 import { FC } from "react";
 import { useParams } from "react-router-dom";
-
-import MainLayout from "layout/main";
 interface ParamTypes {
   id: string;
 }
@@ -9,9 +7,7 @@ interface ParamTypes {
 const Projects: FC = () => {
   const { id } = useParams<ParamTypes>();
   return (
-    <MainLayout>
       <h1>Project ID: {id}</h1>
-    </MainLayout>
   );
 };
 
