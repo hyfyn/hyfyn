@@ -1,8 +1,12 @@
 import { FC } from "react";
-import { MainLayout } from "../css/main"
+import Nav from "app/components/molecules/nav";
+import * as Styled from "../css/main";
 
-const mainLayout: FC = ({ children }) => (
-  <MainLayout className="App">{children}</MainLayout>
+const MainLayout: FC = ({ children }) => (
+  <>
+    <Nav />
+    <Styled.MainLayout>{children}</Styled.MainLayout>
+  </>
 );
 
-export default mainLayout;
+export default MainLayout;
