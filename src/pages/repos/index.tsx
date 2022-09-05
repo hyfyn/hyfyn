@@ -1,138 +1,39 @@
 import { FC } from "react";
-import { useQuery, gql } from "@apollo/client";
-import MainLayout from "app/layout/main";
-import Card from "app/components/atoms/card";
-import Grid from "app/components/atoms/grid";
-import DoughnutChart from "app/components/atoms/charts/doughnut";
-//  Can I Import Types from chart js and clean up the below typings?
+import {
+  ApolloClient,
+  ApolloProvider,
+  createHttpLink,
+  InMemoryCache,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
-// export interface reposProps {}
+import RepoList from "../../app/components/molecules/repoList";
 
-type LanguageEdge = {
-  size: number;
-  node: {
-    name: string;
-    color: string;
-  };
-};
-
-type Language = {
-  totalSize: number;
-  totalCount: number;
-  edges: LanguageEdge[];
-};
-
-interface Repository {
-  name: string;
-  url: string;
-  description: string;
-  languages: Language;
-}
-
-interface User {
-  user: {
-    repositories: {
-      nodes: Repository[];
-    };
-  };
-}
-
-type GraphData = {
-  data: number[];
-  backgroundColor: string[];
-  hoverBackgroundColor: string[];
-};
-
-interface Graph {
-  labels: string[];
-  datasets: GraphData[];
-}
-// const mockGraphData: Graph = {
-//   labels: ["Red", "Green", "Yellow"],
-//   datasets: [
-//     {
-//       data: [300, 50, 100],
-//       backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-//       hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-//     },
-//   ],
-// };
-const EXCHANGE_RATES = gql`
-  query GetUserRepos {
-    user(login: "MSobieray") {
-      repositories(last: 5) {
-        nodes {
-          name
-          url
-          description
-          languages(first: 5) {
-            totalSize
-            totalCount
-            edges {
-              size
-              node {
-                name
-                color
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
-const createGraph = (data: Language): Graph => {
-  const size: number[] = [];
-  const colors: string[] = [];
-  const labels: string[] = [];
-
-  data.edges.forEach((edge) => {
-    size.push(Number(((edge.size / data.totalSize) * 100).toFixed(1)));
-    colors.push(edge.node.color);
-    labels.push(edge.node.name);
-  });
-
+const httpLink = createHttpLink({
+  uri: "https://api.github.com/graphql",
+});
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem("token");
+  // return the headers to the context so httpLink can read them
   return {
-    labels: labels,
-    datasets: [
-      {
-        data: [...size],
-        backgroundColor: [...colors],
-        hoverBackgroundColor: [...colors],
-      },
-    ],
+    headers: {
+      ...headers,
+      authorization: `Bearer ${
+        token ? token : process.env.NEXT_PUBLIC_GITHUB_TOKEN
+      }`,
+    },
   };
-};
+});
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
-const Repos: FC = () => {
-  const { loading, error, data } = useQuery<User>(EXCHANGE_RATES);
-  return (
-    <MainLayout>
-      {loading ? <h1>Loading...</h1> : null}
-      {error ? <h1>Error Fetching Repo Data</h1> : null}
-      {!loading && !error ? (
-        <div>
-          <h1>List of my Repos Queried from GraphQL</h1>
-
-          {data?.user.repositories.nodes.map(
-            ({ description, name, url, languages }) => (
-              <Card key={name} title={`${description} (${name})`} url={url}>
-                <Grid>
-                  <div>
-                    <DoughnutChart data={createGraph(languages)} />
-                  </div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                </Grid>
-              </Card>
-            )
-          )}
-        </div>
-      ) : null}
-    </MainLayout>
-  );
-};
+const Repos: FC = () => (
+  <ApolloProvider client={client}>
+    <RepoList />
+  </ApolloProvider>
+);
 
 export default Repos;
