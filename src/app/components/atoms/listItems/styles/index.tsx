@@ -14,25 +14,30 @@ const UList = styled.ul(
   base,
   ({ theme }) => css`
     &.nav {
-      display: flex;
-      justify-content: center;
       position: fixed;
       top: 0;
-      width: 100%;
-      background-color: ${theme.color.gold};
       padding: 1rem;
+      border-right: ${theme.color.gold} solid 1px;
+      /* min-height: 100vh; */
+      background-color: ${theme.color.black};
+      width: 100%;
+      border-bottom: ${theme.color.white} solid 1px;
       li {
-        padding: 0;
+        border-bottom: ${theme.color.white} solid 1px;
+        padding: 1rem 2rem;
+        &:last-child {
+          border: none;
+        }
       }
       li a {
-        color: ${theme.color.black};
+        color: ${theme.color.white};
         text-decoration: none;
         padding: 1rem;
         &:hover {
-          background-color: ${theme.color.lightGold};
+          color: ${theme.color.lightGold}
         }
         &.active {
-          background-color: ${theme.color.white};
+          color: ${theme.color.gold}
         }
       }
     }

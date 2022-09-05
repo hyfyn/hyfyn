@@ -1,9 +1,11 @@
 const theme = {
   color: {
-    gold: "rgb(247, 196, 27)",
-    lightGold: "rgb(219, 169, 3)",
-    white: "rgb(250, 250, 250)",
-    black: "rgb(0, 0, 0)",
+    gold: "rgb(237, 214, 150)",
+    lightGold: "rgb(237, 225, 190)",
+    white: "rgb(245, 245, 245)",
+    black: "rgb(61, 61, 61)",
+    space: "rgb(73, 88, 90)",
+    persian: "rgb(217, 138, 69)"
   },
   padding: {
     base: "8",
