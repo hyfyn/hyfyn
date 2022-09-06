@@ -2,7 +2,7 @@ import { FC } from "react";
 import { uid } from "utils";
 
 //Atoms
-import { OList, UList, DList } from "../index";
+import { OList, UList, DList } from "./styles";
 
 export interface ListItemsProps {
   type: "ul" | "ol" | "dl";

@@ -1,7 +1,5 @@
 import { FC } from "react";
-import logo from "assets/images/logo.jpg";
-const Logo: FC = () => {
-  return <img className="App-logo" src={logo} alt="HyFyn Logo" />;
-};
+import Image from 'next/image'
+const Logo: FC = () => <Image src="/images/logo.jpg" alt="HyFyn Logo" width={500} height ={500} />;
 
 export default Logo;

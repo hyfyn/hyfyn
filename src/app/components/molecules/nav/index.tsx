@@ -1,40 +1,26 @@
 import { FC } from "react";
-import { Link, useLocation } from "react-router-dom";
-
 import ListItems from "app/components/atoms/listItems";
+import ActiveLink from "app/components/atoms/activeLink";
 
 export interface NavProps {}
 
 const Nav: FC = () => {
-  const location = useLocation();
-  const isActive = () => {
-    return location.pathname.split("/")[1];
-  };
   return (
     <ListItems
       type="ul"
       items={[
-        <Link className={isActive() === "" ? "active" : undefined} to="/">
-          Home
-        </Link>,
-        <Link
-          className={isActive() === "about" ? "active" : undefined}
-          to="/about"
-        >
-          About
-        </Link>,
-        <Link
-          className={isActive() === "repos" ? "active" : undefined}
-          to="/repos"
-        >
-          Repos
-        </Link>,
-        <Link
-          className={isActive() === "project" ? "active" : undefined}
-          to="/project/1"
-        >
-          Projects
-        </Link>,
+        <ActiveLink href="/" activeClassName="active">
+          <a>Home</a>
+        </ActiveLink>,
+        <ActiveLink href="/about" activeClassName="active">
+          <a>About</a>
+        </ActiveLink>,
+        <ActiveLink href="/repos" activeClassName="active">
+          <a>Repos</a>
+        </ActiveLink>,
+        <ActiveLink href="/projects" activeClassName="active">
+          <a>Projects</a>
+        </ActiveLink>,
       ]}
       classes="nav"
     />

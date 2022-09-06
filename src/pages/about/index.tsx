@@ -1,13 +1,9 @@
 import { FC } from "react";
-import MainLayout from "layout/main";
-export interface AboutProps {}
+
+interface AboutProps {}
 
 const About: FC = () => {
-  return (
-    <MainLayout>
-      <h1>About Me: Mr. Butt Stuff</h1>
-    </MainLayout>
-  );
+  return <h1>About Me: Bio Here</h1>;
 };
 
 export default About;
