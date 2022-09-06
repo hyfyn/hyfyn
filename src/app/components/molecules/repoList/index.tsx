@@ -1,41 +1,13 @@
 import { FC } from "react";
-import { useQuery, gql } from "@apollo/client";
 import MainLayout from "app/layout/main";
 import Card from "app/components/atoms/card";
 import Grid from "app/components/atoms/grid";
 import DoughnutChart from "app/components/atoms/charts/doughnut";
+import useRepoQuery, { Language } from "./hooks/useReposQuery";
+
 //  Can I Import Types from chart js and clean up the below typings?
 
 // export interface reposProps {}
-
-type LanguageEdge = {
-  size: number;
-  node: {
-    name: string;
-    color: string;
-  };
-};
-
-type Language = {
-  totalSize: number;
-  totalCount: number;
-  edges: LanguageEdge[];
-};
-
-interface Repository {
-  name: string;
-  url: string;
-  description: string;
-  languages: Language;
-}
-
-interface User {
-  user: {
-    repositories: {
-      nodes: Repository[];
-    };
-  };
-}
 
 type GraphData = {
   data: number[];
@@ -57,31 +29,6 @@ interface Graph {
 //     },
 //   ],
 // };
-
-const QUERY_REPOS = gql`
-  query repos {
-    user(login: "MSobieray") {
-      repositories(last: 5) {
-        nodes {
-          name
-          url
-          description
-          languages(first: 5) {
-            totalSize
-            totalCount
-            edges {
-              size
-              node {
-                name
-                color
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
 const createGraph = (data: Language): Graph => {
   const size: number[] = [];
@@ -107,7 +54,7 @@ const createGraph = (data: Language): Graph => {
 };
 
 const Repos: FC = () => {
-  const { loading, error, data } = useQuery<User>(QUERY_REPOS);
+  const { loading, error, data } = useRepoQuery();
   return (
     <MainLayout>
       {loading ? <h1>Loading...</h1> : null}

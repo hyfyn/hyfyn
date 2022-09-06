@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { FC } from "react";
 
-interface ProjcetProps = {}
+interface ProjectProps {}
 
 const Project: FC = () => {
   const router = useRouter();
