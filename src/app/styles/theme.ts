@@ -3,7 +3,7 @@ const theme = {
     gold: "rgb(237, 214, 150)",
     lightGold: "rgb(237, 225, 190)",
     white: "rgb(245, 245, 245)",
-    black: "rgb(61, 61, 61)",
+    black: "rgb(10, 10, 0)",
     space: "rgb(73, 88, 90)",
     persian: "rgb(217, 138, 69)"
   },
