@@ -1,8 +1,9 @@
 import { FC } from "react";
-export interface AboutProps {}
+
+interface AboutProps {}
 
 const About: FC = () => {
-  return <h1>About Me: Mr. Butt Stuff</h1>;
+  return <h1>About Me: Bio Here</h1>;
 };
 
 export default About;

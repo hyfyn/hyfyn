@@ -1,5 +1,6 @@
 import { FC } from "react";
-export interface PageNotFoundProps {}
+
+interface PageNotFoundProps {}
 
 const PageNotFound: FC = () => {
   return (
