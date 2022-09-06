@@ -2,9 +2,10 @@ import { FC } from "react";
 import Nav from "app/components/molecules/nav";
 import * as Styled from "../css/main";
 
+console.log(process.env.NODE_ENV);
 const MainLayout: FC = ({ children }) => (
   <>
-    <Nav />
+    {process.env.NODE_ENV === "development" ? <Nav /> : null}
     <Styled.MainLayout>{children}</Styled.MainLayout>
   </>
 );

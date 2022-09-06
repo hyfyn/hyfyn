@@ -33,7 +33,6 @@ const ActiveLink = ({
       const activePathname = new URL(asPath, location.href).pathname.split(
         "/"
       )[1];
-      console.log(linkPathname.split("/"), activePathname);
       const newClassName =
         linkPathname.split("/")[1] === activePathname
           ? `${childClassName} ${activeClassName}`.trim()
