@@ -1,8 +1,8 @@
 import { FC } from "react";
 import MainLayout from "app/layout/main";
-import Card from "app/components/atoms/card";
-import Grid from "app/components/atoms/grid";
-import DoughnutChart from "app/components/atoms/charts/doughnut";
+import { Card } from "app/components/atoms";
+import { Grid } from "app/components/atoms";
+import { DoughnutChart } from "app/components/atoms";
 import useRepoQuery, { Language } from "./hooks/useReposQuery";
 
 //  Can I Import Types from chart js and clean up the below typings?
