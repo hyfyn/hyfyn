@@ -1,5 +1,4 @@
 import { FC } from "react";
-import MainLayout from "app/layout/main";
 import { Card } from "app/components/atoms";
 import { Grid } from "app/components/atoms";
 import { DoughnutChart } from "app/components/atoms";
@@ -56,7 +55,7 @@ const createGraph = (data: Language): Graph => {
 const Repos: FC = () => {
   const { loading, error, data } = useRepoQuery();
   return (
-    <MainLayout>
+    <>
       {loading ? <h1>Loading...</h1> : null}
       {error ? <h1>Error Fetching Repo Data</h1> : null}
       {!loading && !error ? (
@@ -66,7 +65,7 @@ const Repos: FC = () => {
           {data?.user.repositories.nodes.map(
             ({ description, name, url, languages }) => (
               <Card key={name} title={`${description} (${name})`} url={url}>
-                <Grid>
+                <Grid columns={2}>
                   <div>
                     <DoughnutChart data={createGraph(languages)} />
                   </div>
@@ -79,7 +78,7 @@ const Repos: FC = () => {
           )}
         </div>
       ) : null}
-    </MainLayout>
+    </>
   );
 };
 

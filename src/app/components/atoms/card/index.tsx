@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FC } from "react";
 
 import * as Styled from "./styles";
@@ -6,15 +7,18 @@ export interface CardProps {
   children: React.ReactNode;
   title: string;
   url: string;
+  border?: boolean;
 }
 
-const Card: FC<CardProps> = ({ children, title, url }) => {
+const Card: FC<CardProps> = ({ border, children, title, url }) => {
   return (
-    <Styled.Card>
-      <Styled.CardTitle>
-        <a href={url}>{title}</a>
-      </Styled.CardTitle>
-      <div className="card__content">{children}</div>
+    <Styled.Card border={border}>
+      <Link href={url}>
+        <a>
+          <Styled.CardTitle>{title}</Styled.CardTitle>
+          <Styled.CardContent>{children}</Styled.CardContent>
+        </a>
+      </Link>
     </Styled.Card>
   );
 };

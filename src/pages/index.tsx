@@ -1,9 +1,13 @@
 import { FC, useEffect, useState } from "react";
-// import Logo from "app/components/atoms/logo";
-import { ScrollIndicator } from "app/components/atoms/scrollIndicator";
-import { IntroTitle } from "app/components/atoms";
-import { ScreenWrap } from "app/components/atoms";
-
+import Image from "next/image";
+import {
+  IntroTitle,
+  ScrollIndicator,
+  ScreenWrap,
+  Grid,
+} from "app/components/atoms";
+import { ContentSection, ProjectThumbnail } from "app/components/molecules";
+import projects from "pages/projects/projects.json";
 const HomePage: FC = () => {
   const [display, setDisplay] = useState(false);
   useEffect(() => {
@@ -19,11 +23,37 @@ const HomePage: FC = () => {
         <ScrollIndicator className={display ? "display" : ""} />
       </ScreenWrap>
 
-      <section>
-        <header>
-          <h1>Hello</h1>
-        </header>
-      </section>
+      <ContentSection
+        h1="Created by Matt Sobieray"
+        h2="Software Engineer and Team Lead at Kinsta"
+      />
+      <ContentSection h1="Projects" h2="A Decade of Work">
+        {/* <ProjectThumbnails amount={3}> */}
+        <Grid columns={3}>
+          {projects.map((project, i) => (
+            <ProjectThumbnail
+              title={project.title}
+              url={`/projects/${project.id}`}
+              key={project.id}
+            >
+              <div>
+                <Image
+                  src={project["image-path"]}
+                  width={300}
+                  height={300}
+                  layout="responsive"
+                />
+              </div>
+              <div>
+                <p>{project.description}</p>
+              </div>
+            </ProjectThumbnail>
+          ))}
+        </Grid>
+      </ContentSection>
+      <ContentSection h1="Blog" h2="Coming Soon">
+        {/* <BlogTumbnails amount={3}> */}
+      </ContentSection>
     </>
   );
 };

@@ -10,7 +10,7 @@ export const MainLayout = styled.main(
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    padding: 0rem 2rem;
+    padding: 0 calc(10px + 2vmin);
   `
 )
 
