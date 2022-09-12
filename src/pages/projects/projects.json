@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1, 
+    "title": "Kinsta", 
+    "sub-title": "Premium Staging Environments", 
+    "description": "this is a description", 
+    "image-path": "/images/logo.jpg",
+    "featured": true,
+    "content": "<p>this is project content</p>"
+  },
+  {
+    "id": 2, 
+    "title": "HomeAdvisor", 
+    "sub-title": "Pre-Priced Packages", 
+    "description": "this is a description", 
+    "image-path": "/images/logo.jpg",
+    "featured": true,
+    "content": "<p>this is project content</p>"
+  },
+  {
+    "id": 3, 
+    "title": "Monigle", 
+    "sub-title": "BEAM", 
+    "description": "this is a description", 
+    "image-path": "/images/logo.jpg",
+    "featured": true,
+    "content": "<p>this is project content</p>"
+  }
+]
