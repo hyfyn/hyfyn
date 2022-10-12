@@ -1,25 +1,30 @@
 import Link from "next/link";
 import { FC } from "react";
 
-import * as Styled from "./styles";
-
+import {
+  Card as CardStyled,
+  CardContent,
+} from "app/components/atoms/card/styles";
+import { H4, H5 } from "../sectionHeading";
 export interface CardProps {
   children: React.ReactNode;
   title: string;
+  subTitle?: string;
   url: string;
   border?: boolean;
 }
 
-const Card: FC<CardProps> = ({ border, children, title, url }) => {
+const Card: FC<CardProps> = ({ border, children, title, subTitle, url }) => {
   return (
-    <Styled.Card border={border}>
+    <CardStyled border={border}>
       <Link href={url}>
         <a>
-          <Styled.CardTitle>{title}</Styled.CardTitle>
-          <Styled.CardContent>{children}</Styled.CardContent>
+          <H4>{title}</H4>
+          <H5>{subTitle}</H5>
+          <CardContent>{children}</CardContent>
         </a>
       </Link>
-    </Styled.Card>
+    </CardStyled>
   );
 };
 

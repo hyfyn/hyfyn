@@ -10,3 +10,14 @@ export const H2 = styled.h2(({theme}) => css`
   margin: 0;
   font-weight: 100;
 `)
+
+export const H4 = styled.h4(({theme}) => css`
+  font-size: 0.9em;
+  margin: 0;
+  color: ${theme.color.gold}
+`)
+export const H5 = styled.h5(({theme}) => css`
+  font-size: 0.7em;
+  margin: 0;
+  font-weight: 100; 
+`)

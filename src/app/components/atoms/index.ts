@@ -1,3 +1,4 @@
+export {default as Avatar} from 'app/components/atoms/avatar';
 export { default as ActiveLink } from 'app/components/atoms/activeLink'
 export { default as listItems } from "app/components/atoms/listItems";
 export { default as Card } from 'app/components/atoms/card'

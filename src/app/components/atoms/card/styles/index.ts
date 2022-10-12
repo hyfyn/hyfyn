@@ -4,9 +4,13 @@ import { css } from "@emotion/react";
 type CardContent = {
   border?: boolean
 }
+
+const borderBase = (color: string) => css`
+   border: 3px solid ${color};
+   border-radius: 10px;
+  `
 export const Card = styled.div<CardContent>(
   ({ theme, border }) => css`
-    padding: ${theme.padding.base}px 0;
     margin-top: 1em;
     ${border ? borderBase(theme.color.white) : null}
     a {
@@ -17,22 +21,31 @@ export const Card = styled.div<CardContent>(
         color: ${theme.color.gold};
       }
     }
+    h4,
+    h5 {
+      margin: 0rem 1rem 0rem 1rem;
+    }
+    h4 {
+      margin-top: 1rem;
+    }
+    &:hover {
+      ${border ? borderBase(theme.color.gold) : null}
+      img{
+        transform: scale(1.1);
+      }
+    }
   `
 );
 
-export const CardTitle = styled.div(
-  ({ theme }) => css`
-    text-align: left;
-    border-bottom: 2px ${theme.color.gold} solid;
-    padding-bottom: 0.5rem;
-  `
-);
-
-const borderBase = (color: string) => css`
-   border: 3px solid ${color};
-   padding: 1em;
-   border-radius: 10px;
-`
 export const CardContent = styled.div<CardContent>(({theme, border}) => css`
     ${border ? borderBase(theme.color.white) : null}
+    padding: 1rem 0;
+   p {
+    margin: 1rem 1rem;
+    font-size: 0.7em;
+    font-weight: 100;
+   }
+   img {
+    transition: transform ease 0.5s;
+   }
 `)

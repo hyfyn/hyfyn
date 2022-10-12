@@ -1,10 +1,20 @@
 import { FC } from "react";
+import projects from "pages/projects/projects.json";
 interface ParamTypes {
   id: string;
 }
 
 const Projects: FC = () => {
-  return <h1>Project ID:</h1>;
+  return (
+    <div>
+      {projects.map((project) => (
+        <>
+          <h1>{project.title}</h1>
+          <h2>{project["sub-title"]}</h2>
+        </>
+      ))}
+    </div>
+  );
 };
 
 export default Projects;
