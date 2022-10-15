@@ -7,7 +7,7 @@ import {
   Grid,
 } from "app/components/atoms";
 import { ContentSection, ProjectThumbnail } from "app/components/molecules";
-import projects from "pages/projects/projects.json";
+import projects from "pages/projects/data/projects.json";
 import Link from "next/link";
 import { Avatar } from "app/components/atoms";
 const HomePage: FC = () => {
@@ -58,7 +58,7 @@ const HomePage: FC = () => {
                 <ProjectThumbnail
                   title={project.title}
                   subTitle={project.subTitle}
-                  url={`/projects/${project.id}`}
+                  url={`/projects/${project.slug}`}
                   key={project.id}
                 >
                   <div>

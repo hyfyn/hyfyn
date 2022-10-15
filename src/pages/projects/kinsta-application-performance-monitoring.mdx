@@ -1,0 +1,21 @@
+import ProjectLayout from "layout/project";
+
+export const meta = {
+  title: "Application Performance Monitoring",
+};
+
+# My MDX page
+
+<div>{meta.title}</div>
+
+This is a list in markdown:
+
+- One
+- Two
+- Three
+
+Checkout my React component:
+
+export default ({ children }) => (
+  <ProjectLayout meta={meta}>{children}</ProjectLayout>
+);

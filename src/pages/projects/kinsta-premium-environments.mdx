@@ -1,0 +1,21 @@
+import ProjectLayout from "layout/project";
+
+export const meta = {
+  title: "Premium Staging Environments",
+};
+
+# My MDX page
+
+This is a list in markdown:
+
+- One
+- Two
+- Three
+
+Checkout my React component:
+
+<div>{meta.title}</div>
+
+export default ({ children }) => (
+  <ProjectLayout meta={meta}>{children}</ProjectLayout>
+);
