@@ -11,7 +11,7 @@ const borderBase = (color: string) => css`
   `
 export const Card = styled.div<CardContent>(
   ({ theme, border }) => css`
-    margin-top: 1em;
+    margin: 1em 0 0;
     ${border ? borderBase(theme.color.white) : null}
     a {
       color: ${theme.color.white};
@@ -37,10 +37,11 @@ export const Card = styled.div<CardContent>(
   `
 );
 
-export const CardContent = styled.div<CardContent>(({theme, border}) => css`
+export const CardContent = styled.figure<CardContent>(({theme, border}) => css`
     ${border ? borderBase(theme.color.white) : null}
     padding: 1rem 0;
-   p {
+    margin: 0;
+   figcaption {
     margin: 1rem 1rem;
     font-size: 0.7em;
     font-weight: 100;

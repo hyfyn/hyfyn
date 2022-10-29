@@ -1,6 +1,6 @@
 export {default as Avatar} from 'app/components/atoms/avatar';
 export { default as ActiveLink } from 'app/components/atoms/activeLink'
-export { default as listItems } from "app/components/atoms/listItems";
+export { default as ListItems } from "app/components/atoms/listItems";
 export { default as Card } from 'app/components/atoms/card'
 export { default as DoughnutChart } from 'app/components/atoms/charts/doughnut';
 export { Grid } from "app/components/atoms/grid/styles";

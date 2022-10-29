@@ -50,28 +50,23 @@ const HomePage: FC = () => {
         </p>
       </ContentSection>
       <ContentSection h1="Projects" h2="A Decade of Work">
-        {/* <ProjectThumbnails amount={3}> */}
         <Grid columns={3} displayType="grid">
-          {projects.map((project, i) => {
+          {projects.map((project) => {
             if (project.isFeatured) {
               return (
                 <ProjectThumbnail
                   title={project.title}
                   subTitle={project.subTitle}
                   url={`/projects/${project.slug}`}
-                  key={project.id}
+                  key={project.slug}
                 >
-                  <div>
-                    <Image
-                      src={project.imagePath}
-                      width={300}
-                      height={300}
-                      layout="responsive"
-                    />
-                  </div>
-                  <div>
-                    <p>{project.description}</p>
-                  </div>
+                  <Image
+                    src={project.imagePath}
+                    width={300}
+                    height={300}
+                    layout="responsive"
+                  />
+                  <figcaption>{project.description}</figcaption>
                 </ProjectThumbnail>
               );
             }

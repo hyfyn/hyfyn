@@ -1,5 +1,5 @@
 import { FC } from "react";
-import ListItems from "app/components/atoms/listItems";
+import { ListItems } from "app/components/atoms";
 import { ActiveLink } from "app/components/atoms";
 
 export interface NavProps {}
