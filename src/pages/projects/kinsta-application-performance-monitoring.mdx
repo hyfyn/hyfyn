@@ -1,20 +1,50 @@
 import ProjectLayout from "layout/project";
+import { Grid, Section } from "app/components/atoms";
+import { ContentSection } from "app/components/molecules";
 
 export const meta = {
   title: "Application Performance Monitoring",
+  heroImage: "/images/projects/kinsta/apm_hero.png",
+  enablingApmImage: "/images/projects/kinsta/enable_apm_timeframe_crop.png",
+  chartApmImage: "/images/projects/kinsta/apm_results_crop.png",
 };
 
-# My MDX page
+<ContentSection h1={meta.title} h2="Kinsta's WordPress APM">
+  <img src={meta.heroImage} width="100%" alt="apm hero image" />
+</ContentSection>
 
-<div>{meta.title}</div>
-
-This is a list in markdown:
-
-- One
-- Two
-- Three
-
-Checkout my React component:
+<ContentSection h1="The Internals" h2="A PHP Agent with ElasticSearch">
+  <Grid columns={2} displayType="grid">
+    The APM is a free feature that allows Kinsta's users to see preformance
+    bottlenecks in their WordPress sites. The data collected by the APM was
+    using a PHP Agent that was custom built at Kinsta and is collecting data
+    which is stored in ElasticSearch. When the Agent is enabled it will be
+    prepended to the PHP processes and measure the amount of time hooks,
+    functions, db queries, and external queries would take.
+    <img
+      src={meta.enablingApmImage}
+      width="100%"
+      alt="enabling the kinsta apm"
+    />
+  </Grid>
+</ContentSection>
+<ContentSection h1="Data Visualization" h2="Filterable Charts">
+  <Grid columns={2} displayType="grid">
+    <img
+      src={meta.chartApmImage}
+      width="100%"
+      alt="data chart of the kinsta apm"
+    />
+    The data collected is consumed from ElasticSearch using GraphQL and displayed
+    in the MyKinsta application dashboard. The data visualization is meant help display
+    which technical areas of the site are the slowest.
+  </Grid>
+</ContentSection>
+<ContentSection h1="Drilling Down" h2="Sorting Tables">
+  Sortable data tables allow users to see which span in the list of transactions
+  was the slowest. Clicking items in the span table opens a modal to diaplay a
+  stack trace that helps users pinpoint where optimizations could be applied.
+</ContentSection>
 
 export default ({ children }) => (
   <ProjectLayout meta={meta}>{children}</ProjectLayout>
