@@ -1,12 +1,12 @@
 import { FC } from "react";
-import projects from "pages/projects/data/projects.json";
+import projectsData from "data/projects.json";
 import Image from "next/image";
 import { ProjectThumbnail } from "app/components/molecules";
 import { Grid } from "app/components/atoms";
 const Projects: FC = () => {
   return (
-    <Grid columns={4} displayType="grid">
-      {projects.map((project) => (
+    <Grid columns={4} displayType="grid" style={{ marginTop: "3em" }}>
+      {projectsData.map((project) => (
         <ProjectThumbnail
           title={project.title}
           subTitle={project.subTitle}

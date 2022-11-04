@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import Image, { ImageProps } from "next/image";
 import { SectionHeading } from "app/components/atoms";
+import Link from "next/link";
 interface ProjectLayoutProps {
   children: ReactElement;
 }
@@ -16,6 +17,7 @@ const components = {
   // p: Text,
   // pre: Pre,
   // code: InlineCode,
+  a: Link,
 };
 
 const ProjectLayout = ({ children, ...props }: ProjectLayoutProps) => {

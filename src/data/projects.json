@@ -30,5 +30,40 @@
     "description": "this is a description", 
     "imagePath": "/images/logo.jpg",
     "isFeatured": false
+  },
+  {
+    "title": "The Firm Graphics", 
+    "subTitle": "WordPress Developer",
+    "slug": "the-firm-graphics", 
+    "description": "Building WordPress Sites", 
+    "imagePath": "/images/logo.jpg",
+    "isFeatured": false
+  },
+  {
+    "title": "HyFyn", 
+    "subTitle": "Founder / Freelancer",
+    "slug": "hyfyn", 
+    "description": "Freelancing", 
+    "imagePath": "/images/logo.jpg",
+    "isFeatured": false
+  },
+  {
+    "title": "SmashBurger", 
+    "subTitle": "Full Site Build",
+    "slug": "smashburger", 
+    "description": "new site build", 
+    "imagePath": "/images/logo.jpg",
+    "isFeatured": false
+  },
+  {
+    "title": "Kapost", 
+    "subTitle": "Web Developer",
+    "slug": "kapost", 
+    "description": "Content Marketing Platform", 
+    "imagePath": "/images/logo.jpg",
+    "isFeatured": false
+  },
+  {
+    
   }
 ]

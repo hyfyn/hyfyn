@@ -7,7 +7,7 @@ import {
   Grid,
 } from "app/components/atoms";
 import { ContentSection, ProjectThumbnail } from "app/components/molecules";
-import projects from "pages/projects/data/projects.json";
+import projectsData from "data/projects.json";
 import Link from "next/link";
 import { Avatar } from "app/components/atoms";
 const HomePage: FC = () => {
@@ -51,7 +51,7 @@ const HomePage: FC = () => {
       </ContentSection>
       <ContentSection h1="Projects" h2="A Decade of Work">
         <Grid columns={3} displayType="grid">
-          {projects.map((project) => {
+          {projectsData.map((project) => {
             if (project.isFeatured) {
               return (
                 <ProjectThumbnail
