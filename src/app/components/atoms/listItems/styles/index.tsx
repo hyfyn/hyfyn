@@ -22,6 +22,7 @@ const UList = styled.ul(
       background-color: ${theme.color.black};
       width: 100%;
       border-bottom: ${theme.color.white} solid 1px;
+      z-index: 100;
       li {
         border-bottom: ${theme.color.white} solid 1px;
         padding: 1rem 2rem;
@@ -34,10 +35,10 @@ const UList = styled.ul(
         text-decoration: none;
         padding: 1rem;
         &:hover {
-          color: ${theme.color.lightGold}
+          color: ${theme.color.lightGold};
         }
         &.active {
-          color: ${theme.color.gold}
+          color: ${theme.color.gold};
         }
       }
     }

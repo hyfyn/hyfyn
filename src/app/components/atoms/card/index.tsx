@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 import {
   Card as CardStyled,
@@ -7,7 +7,7 @@ import {
 } from "app/components/atoms/card/styles";
 import { H4, H5 } from "../sectionHeading";
 export interface CardProps {
-  children: React.ReactNode;
+  children: ReactNode;
   title: string;
   subTitle?: string;
   url: string;
