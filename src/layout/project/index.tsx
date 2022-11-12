@@ -1,10 +1,12 @@
 import { ReactElement } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import Image, { ImageProps } from "next/image";
-import { BackButton, Grid, SectionHeading } from "app/components/atoms";
-import Link from "next/link";
+import { BackButton, Grid, SectionHeading, Link } from "app/components/atoms";
 interface ProjectLayoutProps {
   children: ReactElement;
+  meta: {
+    nextProject: string;
+  };
 }
 const ResponsiveImage = (props: ImageProps) => (
   <Image layout="responsive" {...props} />
@@ -28,11 +30,13 @@ const ProjectLayout = ({ children, ...props }: ProjectLayoutProps) => {
           {children}
         </div>
       </MDXProvider>
-      <Grid columns={2} displayType="grid">
+      <Grid columns={2} displayType="flex">
         <BackButton />
-        <Link scroll={true} href={`/projects/${props.meta.nextProject}`}>
-          Next Project 👉
-        </Link>
+        {props.meta.nextProject && (
+          <Link href={`/projects/${props.meta.nextProject}`}>
+            Next Project 👉
+          </Link>
+        )}
       </Grid>
     </>
   );

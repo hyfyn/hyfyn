@@ -7,6 +7,7 @@ export const Button = styled.button(({theme}) => css`
   color: ${theme.color.gold};
   appearance: none;
   font-size: 1rem;
+  margin-bottom: 2rem;
   :hover {
     cursor: pointer;
   }

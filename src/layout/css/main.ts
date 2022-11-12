@@ -11,6 +11,9 @@ export const MainLayout = styled.main(
     font-size: calc(10px + 2vmin);
     color: white;
     padding: 0 calc(10px + 2vmin);
+    @media (max-width: 1024px) {
+      padding: 0 1rem;
+    }
   `
 )
 

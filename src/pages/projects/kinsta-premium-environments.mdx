@@ -1,7 +1,7 @@
 import ProjectLayout from "layout/project";
 import { Grid } from "app/components/atoms";
 import { ContentSection } from "app/components/molecules";
-import { BackButton } from "app/components/atoms";
+import { BackButton, Link } from "app/components/atoms";
 
 export const meta = {
   title: "Premium Staging Environments",
@@ -12,8 +12,12 @@ export const meta = {
   nextProject: "kinsta-application-performance-monitoring",
 };
 
-<BackButton />
-
+<Grid columns={2} displayType="flex">
+  <BackButton />
+  <Link scroll={true} href={`/projects/${meta.nextProject}`}>
+    <a>Next Project 👉</a>
+  </Link>
+</Grid>
 <ContentSection h1={meta.title} h2="A New Premium Add-on">
   <img src={meta.heroImage} width="100%" alt="premium environment add-on" />
 </ContentSection>

@@ -1,7 +1,8 @@
 import ProjectLayout from "layout/project";
 import { Grid } from "app/components/atoms";
 import { ContentSection } from "app/components/molecules";
-import { BackButton } from "app/components/atoms";
+import { BackButton, Link } from "app/components/atoms";
+
 export const meta = {
   title: "Application Performance Monitoring",
   heroImage: "/images/projects/kinsta/apm_hero.png",
@@ -11,8 +12,12 @@ export const meta = {
   nextProject: "homeadvisor-pre-priced-packages",
 };
 
-<BackButton />
-
+<Grid columns={2} displayType="flex">
+  <BackButton />
+  <Link scroll={true} href={`/projects/${meta.nextProject}`}>
+    <a>Next Project 👉</a>
+  </Link>
+</Grid>
 <ContentSection h1={meta.title} h2="Kinsta's WordPress APM">
   <img src={meta.heroImage} width="100%" alt="apm hero image" />
 </ContentSection>

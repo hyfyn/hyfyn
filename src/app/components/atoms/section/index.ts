@@ -11,5 +11,8 @@ export const Section = styled.section(({theme}) => css`
     font-weight: 100;
     font-size: 0.65em;
   }
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 
 `)

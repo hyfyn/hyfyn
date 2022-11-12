@@ -23,6 +23,12 @@ export const Grid = styled.div<GridProps>(
         margin-left: 1em;
       }
     `}
+    @media (max-width: 1024px) {
+      display: block;
+      * {
+        margin-left: 0;
+      }
+    }
 
   `
 );
