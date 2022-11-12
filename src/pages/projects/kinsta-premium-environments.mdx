@@ -1,20 +1,64 @@
 import ProjectLayout from "layout/project";
+import { Grid } from "app/components/atoms";
+import { ContentSection } from "app/components/molecules";
+import { BackButton } from "app/components/atoms";
 
 export const meta = {
   title: "Premium Staging Environments",
+  heroImage: "/images/projects/kinsta/pse_hero.png",
+  cloneEnvImage: "/images/projects/kinsta/pse_clone_env.png",
+  pushEnvImage: "/images/projects/kinsta/pse_push_env.png",
+  restoreEnvImage: "/images/projects/kinsta/pse_restore.png",
+  nextProject: "kinsta-application-performance-monitoring",
 };
 
-# My MDX page
+<BackButton />
 
-This is a list in markdown:
+<ContentSection h1={meta.title} h2="A New Premium Add-on">
+  <img src={meta.heroImage} width="100%" alt="premium environment add-on" />
+</ContentSection>
 
-- One
-- Two
-- Three
-
-Checkout my React component:
-
-<div>{meta.title}</div>
+<ContentSection h1="Extending Environments" h2="Switching Context">
+  <Grid columns={2} displayType="grid">
+    Kinsta's hosting was initially built around having 2 environments, staging
+    and live. One of our number one feature requests was to allow sites the
+    ability have multiple staging environments. This was a major shift in our
+    platform because it was not setup to switch between more than 2 environment
+    contexts. The biggest challenge was ensuring these new environments were
+    working with our GCP infastructure and existing Ansible playbooks. Allowing
+    our existing feature set to move seamlesslessly between multiple contexts
+    became a year long project.
+    <img src={meta.cloneEnvImage} width="100%" alt="alt" />
+  </Grid>
+</ContentSection>
+<ContentSection h1="Pushing Environments" h2="Deploying Changes">
+  <Grid columns={2} displayType="grid">
+    <img
+      src={meta.pushEnvImage}
+      width="100%"
+      alt="push environment dropdown menu"
+    />
+    A big part of hosting at Kinsta is the ease of mangaing your wordpress installs
+    and deploying changes to production. With the new multiple environment setup
+    we needed to create a hierarchy that allowed users to cross push staging environments
+    while also retaining the able to be deployed to production.
+  </Grid>
+</ContentSection>
+<ContentSection h1="Backup Restoration" h2="Rolling Back Changes">
+  <Grid columns={2} displayType="grid">
+    Creating backups of an envionment allows users to quickly roll back changes
+    when they need too. We wanted to also allow users to restore backups across
+    all of a site's environments. This allows a staging environment to easily be
+    over written by another environments backup and worked on. In case of
+    emergencies a back can be restored to a staging environment, fixed, and
+    deployed.
+    <img
+      src={meta.restoreEnvImage}
+      width="100%"
+      alt="restore backup to environment"
+    />
+  </Grid>
+</ContentSection>
 
 export default ({ children }) => (
   <ProjectLayout meta={meta}>{children}</ProjectLayout>

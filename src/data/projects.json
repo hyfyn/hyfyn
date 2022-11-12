@@ -5,7 +5,8 @@
     "slug": "kinsta-premium-environments",
     "description": "Environments that are equal to the power of your live environment", 
     "imagePath": "/images/projects/kinsta/create_env_thumbnail.png",
-    "isFeatured": true
+    "isFeatured": true,
+    "isDisplayed": true
   },
   { 
     "title": "Kinsta", 
@@ -13,7 +14,8 @@
     "slug": "kinsta-application-performance-monitoring",
     "description": "Monitor your wordpress site and discover performance issues and bottlenecks", 
     "imagePath": "/images/projects/kinsta/enable_apm_thumbnail.png",
-    "isFeatured": true
+    "isFeatured": true,
+    "isDisplayed": true
   },
   {
     "title": "HomeAdvisor", 
@@ -21,7 +23,8 @@
     "slug": "homeadvisor-pre-priced-packages",
     "description": "A new product offering to capture business when no matches were found", 
     "imagePath": "/images/projects/homeadvisor/initial_step_thumbnail.png",
-    "isFeatured": true
+    "isFeatured": true,
+    "isDisplayed": true
   },
   {
     "title": "Monigle", 
@@ -29,7 +32,8 @@
     "slug": "monigle-beam", 
     "description": "this is a description", 
     "imagePath": "/images/logo.jpg",
-    "isFeatured": false
+    "isFeatured": false,
+    "isDisplayed": false
   },
   {
     "title": "The Firm Graphics", 
@@ -37,7 +41,8 @@
     "slug": "the-firm-graphics", 
     "description": "Building WordPress Sites", 
     "imagePath": "/images/logo.jpg",
-    "isFeatured": false
+    "isFeatured": false,
+    "isDisplayed": false
   },
   {
     "title": "HyFyn", 
@@ -45,7 +50,8 @@
     "slug": "hyfyn", 
     "description": "Freelancing", 
     "imagePath": "/images/logo.jpg",
-    "isFeatured": false
+    "isFeatured": false,
+    "isDisplayed": false
   },
   {
     "title": "SmashBurger", 
@@ -53,7 +59,8 @@
     "slug": "smashburger", 
     "description": "new site build", 
     "imagePath": "/images/logo.jpg",
-    "isFeatured": false
+    "isFeatured": false,
+    "isDisplayed": false
   },
   {
     "title": "Kapost", 
@@ -61,6 +68,7 @@
     "slug": "kapost", 
     "description": "Content Marketing Platform", 
     "imagePath": "/images/logo.jpg",
-    "isFeatured": false
+    "isFeatured": false,
+    "isDisplayed": false
   }
 ]
