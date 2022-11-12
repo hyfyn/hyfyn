@@ -3,10 +3,12 @@ import projectsData from "data/projects.json";
 import Image from "next/image";
 import { ProjectThumbnail } from "app/components/molecules";
 import { Grid } from "app/components/atoms";
+
+const projectData = projectsData.filter((project) => project.isDisplayed);
 const Projects: FC = () => {
   return (
-    <Grid columns={4} displayType="grid" style={{ marginTop: "3em" }}>
-      {projectsData.map((project) => (
+    <Grid columns={3} displayType="grid" style={{ marginTop: "3em" }}>
+      {projectData.map((project) => (
         <ProjectThumbnail
           title={project.title}
           subTitle={project.subTitle}

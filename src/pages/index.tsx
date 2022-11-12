@@ -5,10 +5,10 @@ import {
   ScrollIndicator,
   ScreenWrap,
   Grid,
+  Link,
 } from "app/components/atoms";
 import { ContentSection, ProjectThumbnail } from "app/components/molecules";
 import projectsData from "data/projects.json";
-import Link from "next/link";
 import { Avatar } from "app/components/atoms";
 const HomePage: FC = () => {
   const [display, setDisplay] = useState(false);
@@ -34,11 +34,11 @@ const HomePage: FC = () => {
           <Grid displayType="flex">
             <Avatar />
             <p>
-              HyFyn was a company I started while I was working as a freelance
-              developer and designer. The name was because people would greet my
-              dog "Hi, Finn" and it sounded like they were saying hyphen
-              (HyFyn). The company is no more, but I kept the moniker for my
-              online identity.
+              👋 Welcome to HyFyn. HyFyn was a company I started while I was
+              working as a freelance developer and designer. The name was
+              because people would greet my dog "Hi, Finn" and it sounded like
+              they were saying hyphen (HyFyn). The company is no more, but I
+              kept the moniker for my online identity.
             </p>
           </Grid>
         </div>
@@ -49,7 +49,7 @@ const HomePage: FC = () => {
           languages by learning Rust with Solana.
         </p>
       </ContentSection>
-      <ContentSection h1="Projects" h2="A Decade of Work">
+      <ContentSection h1="Prior Work" h2="A Decade of Learning">
         <Grid columns={3} displayType="grid">
           {projectsData.map((project) => {
             if (project.isFeatured) {
@@ -72,7 +72,8 @@ const HomePage: FC = () => {
             }
           })}
         </Grid>
-        <Link href="/projects">See All</Link>
+        {/* <Link href="/projects">All Prior Work 👉</Link> */}
+        <i>more projects coming soon - 👆 my past 4 years</i>
       </ContentSection>
       <ContentSection h1="Blog" h2="Coming Soon">
         {/* <BlogTumbnails amount={3}> */}

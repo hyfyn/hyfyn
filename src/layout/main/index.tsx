@@ -4,7 +4,7 @@ import * as Styled from "../css/main";
 
 const MainLayout: FC = ({ children }) => (
   <>
-    {process.env.NODE_ENV === "development" ? <Nav /> : null}
+    {/* {process.env.NODE_ENV === "development" ? <Nav /> : null} */}
     <Styled.MainLayout>{children}</Styled.MainLayout>
   </>
 );
