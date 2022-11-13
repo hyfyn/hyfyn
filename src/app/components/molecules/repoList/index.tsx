@@ -65,7 +65,7 @@ const Repos: FC = () => {
           {data?.user.repositories.nodes.map(
             ({ description, name, url, languages }) => (
               <Card key={name} title={`${description} (${name})`} url={url}>
-                <Grid columns={2}>
+                <Grid columns={2} displayType="grid">
                   <div>
                     <DoughnutChart data={createGraph(languages)} />
                   </div>
