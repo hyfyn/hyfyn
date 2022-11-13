@@ -1,12 +1,35 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
+type GridProps = {
+  columns?: number;
+  displayType: 'grid' | 'flex';
+  responsive?: boolean
+}
 // TODO add ability to pass dynamic grid layouts
-export const Grid = styled.div(
-  ({ theme }) => css`
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: max-content;
-    margin: 1rem;
-  `
-);
+export const Grid = styled.div<GridProps>(
+  ({ theme, columns, displayType, responsive = true }) => css`
+    
+    ${displayType === 'grid' && css`
+      display: grid;
+      grid-template-columns: repeat(${columns}, 1fr);
+      column-gap: 1em;
+      row-gap: 1em;
+    `}
+    ${displayType === 'flex' && css`
+      display: flex;
+      flex: 1;
+      align-items: center;
+      * {
+        margin-left: 1em;
+      }
+    `}
+    ${responsive ?? css`
+      @media (max-width: 1024px) {
+        display: block;
+        * {
+          margin-left: 0;
+        }
+      }`
+    }
+  `);

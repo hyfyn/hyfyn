@@ -1,0 +1,74 @@
+[
+  { 
+    "title": "Kinsta", 
+    "subTitle": "Premium Staging Environments", 
+    "slug": "kinsta-premium-environments",
+    "description": "Environments that are equal to the power of your live environment", 
+    "imagePath": "/images/projects/kinsta/create_env_thumbnail.png",
+    "isFeatured": true,
+    "isDisplayed": true
+  },
+  { 
+    "title": "Kinsta", 
+    "subTitle": "Application Performance Monitoring",
+    "slug": "kinsta-application-performance-monitoring",
+    "description": "Monitor your wordpress site and discover performance issues and bottlenecks", 
+    "imagePath": "/images/projects/kinsta/enable_apm_thumbnail.png",
+    "isFeatured": true,
+    "isDisplayed": true
+  },
+  {
+    "title": "HomeAdvisor", 
+    "subTitle": "Pre-Priced Packages", 
+    "slug": "homeadvisor-pre-priced-packages",
+    "description": "A new product offering to capture business when no matches were found", 
+    "imagePath": "/images/projects/homeadvisor/initial_step_thumbnail.png",
+    "isFeatured": true,
+    "isDisplayed": true
+  },
+  {
+    "title": "Monigle", 
+    "subTitle": "BEAM",
+    "slug": "monigle-beam", 
+    "description": "this is a description", 
+    "imagePath": "/images/logo.jpg",
+    "isFeatured": false,
+    "isDisplayed": false
+  },
+  {
+    "title": "The Firm Graphics", 
+    "subTitle": "WordPress Developer",
+    "slug": "the-firm-graphics", 
+    "description": "Building WordPress Sites", 
+    "imagePath": "/images/logo.jpg",
+    "isFeatured": false,
+    "isDisplayed": false
+  },
+  {
+    "title": "HyFyn", 
+    "subTitle": "Founder / Freelancer",
+    "slug": "hyfyn", 
+    "description": "Freelancing", 
+    "imagePath": "/images/logo.jpg",
+    "isFeatured": false,
+    "isDisplayed": false
+  },
+  {
+    "title": "SmashBurger", 
+    "subTitle": "Full Site Build",
+    "slug": "smashburger", 
+    "description": "new site build", 
+    "imagePath": "/images/logo.jpg",
+    "isFeatured": false,
+    "isDisplayed": false
+  },
+  {
+    "title": "Kapost", 
+    "subTitle": "Web Developer",
+    "slug": "kapost", 
+    "description": "Content Marketing Platform", 
+    "imagePath": "/images/logo.jpg",
+    "isFeatured": false,
+    "isDisplayed": false
+  }
+]

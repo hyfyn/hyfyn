@@ -1,0 +1,41 @@
+import ProjectLayout from "layout/project";
+import { Grid } from "app/components/atoms";
+import { ContentSection } from "app/components/molecules";
+import { BackButton } from "app/components/atoms";
+
+export const meta = {
+  title: "title",
+  heroImage: "/images/projects/kinsta/apm_hero.png",
+  enablingApmImage: "/images/projects/kinsta/enable_apm_timeframe_crop.png",
+  chartApmImage: "/images/projects/kinsta/apm_results_crop.png",
+};
+
+<BackButton />
+
+<ContentSection h1={meta.title} h2="Kinsta's WordPress APM">
+  <img src={meta.heroImage} width="100%" alt="alt" />
+</ContentSection>
+
+<ContentSection h1="Title" h2="subtitle">
+  <Grid columns={2} displayType="grid">
+    placeholder
+    <img src={meta.enablingApmImage} width="100%" alt="alt" />
+  </Grid>
+</ContentSection>
+<ContentSection h1="Title" h2="subtitle">
+  <Grid columns={2} displayType="grid">
+    <img
+      src={meta.chartApmImage}
+      width="100%"
+      alt="data chart of the kinsta apm"
+    />
+    placeholder
+  </Grid>
+</ContentSection>
+<ContentSection h1="Title" h2="subtitle">
+  placeholder
+</ContentSection>
+
+export default ({ children }) => (
+  <ProjectLayout meta={meta}>{children}</ProjectLayout>
+);

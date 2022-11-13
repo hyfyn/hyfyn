@@ -11,6 +11,11 @@ const reset = css`
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
+  i {
+    font-size: 0.5em;
+    margin: 0.5em 0;
+    font-weight: 100;
+  }
 `;
 
 export const GlobalStyles = () => <Global styles={reset} />;

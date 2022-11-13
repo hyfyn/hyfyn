@@ -6,8 +6,9 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import RepoList from "app/components/molecules/repoList";
 
-import RepoList from "../../app/components/molecules/repoList";
+console.log(process.env.NEXT_PUBLIC_GITHUB_TOKEN);
 
 const httpLink = createHttpLink({
   uri: "https://api.github.com/graphql",

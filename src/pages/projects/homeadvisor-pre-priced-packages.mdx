@@ -1,0 +1,60 @@
+import ProjectLayout from "layout/project";
+import { Grid } from "app/components/atoms";
+import { ContentSection } from "app/components/molecules";
+import { BackButton, Link } from "app/components/atoms";
+
+export const meta = {
+  title: "HomeAdvisor",
+  heroImage: "/images/projects/homeadvisor/ha_hero.png",
+  haConcierge: "/images/projects/homeadvisor/ha_concierge.png",
+  haPayment: "/images/projects/homeadvisor/ha_payment.png",
+  haCheckout: "/images/projects/homeadvisor/ha_checkout.png",
+};
+
+<BackButton />
+<ContentSection h1={meta.title} h2="Pre-Priced Packages">
+  <img src={meta.heroImage} width="100%" alt="homeadvisor fencing quote" />
+</ContentSection>
+
+<ContentSection h1="HomeAdvisor Concierge" h2="Project Managment">
+  <Grid columns={2} displayType="grid">
+    While working at HomeAdvisor I was responsible for building a new product
+    offering that used our collected data points to accuractly quote projects.
+    If users accepted the price a HomeAdvisor concierge would find a service
+    professional that would do the work for the quoted price. Allowing the user
+    to work with HomeAdvisor and not having to manage the service professionals
+    and haggle with pricing.
+    <img
+      src={meta.haConcierge}
+      width="100%"
+      alt="book with a homeadvisor concierge"
+    />
+  </Grid>
+</ContentSection>
+<ContentSection h1="Accurate Pricing" h2="Based on Project Specs">
+  <Grid columns={2} displayType="grid">
+    <img
+      src={meta.haPayment}
+      width="100%"
+      alt="homeadvisor price quote and deposit"
+    />
+    After collecting user input we would compare the projects specifications with
+    similar projects booked in that area to determine a price range. Then our concierge
+    would be able to work with the user to determine the final details and find the
+    user a service professional to do the work within the price quoted.
+  </Grid>
+</ContentSection>
+<ContentSection h1="Checkout" h2="Down Payment Collection">
+  <Grid columns={2} displayType="grid">
+    The final checkout was using Stripe as our payment gateway. Using Stripe
+    Elements we created customer id's to track a users project and charge them
+    the down payment. All the projects purchased were accesible to our
+    concierge's and they could see all the project data while managing the
+    pipeline of each project and along with collecting payments.
+    <img src={meta.haCheckout} width="100%" alt="homeadvisort final checkout" />
+  </Grid>
+</ContentSection>
+
+export default ({ children }) => (
+  <ProjectLayout meta={meta}>{children}</ProjectLayout>
+);
