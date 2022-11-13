@@ -28,7 +28,7 @@ const ProjectLayout = ({ children, ...props }: ProjectLayoutProps) => {
           {children}
         </div>
       </MDXProvider>
-      <Grid columns={2} displayType="flex">
+      <Grid columns={2} displayType="flex" responsive={false}>
         <BackButton />
         {props.meta.nextProject && (
           <Link href={`/projects/${props.meta.nextProject}`}>

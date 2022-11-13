@@ -4,10 +4,11 @@ import { css } from "@emotion/react";
 type GridProps = {
   columns?: number;
   displayType: 'grid' | 'flex';
+  responsive?: boolean
 }
 // TODO add ability to pass dynamic grid layouts
 export const Grid = styled.div<GridProps>(
-  ({ theme, columns, displayType }) => css`
+  ({ theme, columns, displayType, responsive = true }) => css`
     
     ${displayType === 'grid' && css`
       display: grid;
@@ -23,12 +24,12 @@ export const Grid = styled.div<GridProps>(
         margin-left: 1em;
       }
     `}
-    @media (max-width: 1024px) {
-      display: block;
-      * {
-        margin-left: 0;
-      }
+    ${responsive ?? css`
+      @media (max-width: 1024px) {
+        display: block;
+        * {
+          margin-left: 0;
+        }
+      }`
     }
-
-  `
-);
+  `);
