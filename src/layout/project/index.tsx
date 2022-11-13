@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import Image, { ImageProps } from "next/image";
 import { BackButton, Grid, SectionHeading, Link } from "app/components/atoms";
+import { Component } from "mdx/types";
 interface ProjectLayoutProps {
   children: ReactElement;
   meta: {
@@ -13,13 +14,10 @@ const ResponsiveImage = (props: ImageProps) => (
 );
 
 const components = {
-  img: ResponsiveImage,
+  img: ResponsiveImage as Component<any>,
   h1: SectionHeading.H1,
   h2: SectionHeading.H2,
-  // p: Text,
-  // pre: Pre,
-  // code: InlineCode,
-  a: Link,
+  a: Link as Component<any>,
 };
 
 const ProjectLayout = ({ children, ...props }: ProjectLayoutProps) => {
