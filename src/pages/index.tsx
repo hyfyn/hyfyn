@@ -55,7 +55,7 @@ const HomePage: FC = () => {
         </p>
       </ContentSection>
       <ContentSection h1="Prior Work" h2="A Decade of Learning">
-        <Grid columns={3} displayType="grid">
+        <Grid columns={3} displayType="grid" responsive={true}>
           {projectsData.map((project) => {
             if (project.isFeatured) {
               return (

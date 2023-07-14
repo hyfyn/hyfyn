@@ -9,6 +9,7 @@ export const FixedContainer = styled.div(
     background-color: ${theme.color.black};
     border-right: 0px solid ${theme.color.gold};
     &.open {
+      min-width: 150px;
       max-width: 150px;
       border-right-width: 1px;
       flex: 1;

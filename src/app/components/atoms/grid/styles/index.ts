@@ -3,20 +3,21 @@ import { css } from "@emotion/react";
 
 type GridProps = {
   columns?: number;
-  displayType: 'grid' | 'flex';
-  responsive?: boolean
-}
+  displayType: "grid" | "flex";
+  responsive?: boolean;
+};
 // TODO add ability to pass dynamic grid layouts
 export const Grid = styled.div<GridProps>(
   ({ theme, columns, displayType, responsive = true }) => css`
-    
-    ${displayType === 'grid' && css`
+    ${displayType === "grid" &&
+    css`
       display: grid;
       grid-template-columns: repeat(${columns}, 1fr);
       column-gap: 1em;
       row-gap: 1em;
     `}
-    ${displayType === 'flex' && css`
+    ${displayType === "flex" &&
+    css`
       display: flex;
       flex: 1;
       align-items: center;
@@ -24,12 +25,15 @@ export const Grid = styled.div<GridProps>(
         margin-left: 1em;
       }
     `}
-    ${responsive ?? css`
+    ${responsive &&
+    css`
       @media (max-width: 1024px) {
         display: block;
+        max-width: 500px;
         * {
           margin-left: 0;
         }
-      }`
-    }
-  `);
+      }
+    `}
+  `
+);
