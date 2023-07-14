@@ -1,0 +1,59 @@
+import ProjectLayout from "layout/project";
+import { ContentSection } from "app/components/molecules";
+import { BackButton } from "app/components/atoms";
+export const meta = {
+  title: "The Journey of a Self-Taught Developer",
+  heroImage: "/images/blog/developer-journey2.png",
+  enablingApmImage: "/images/projects/kinsta/enable_apm_timeframe_crop.png",
+  chartApmImage: "/images/projects/kinsta/apm_results_crop.png",
+};
+
+<ContentSection
+  h1={meta.title}
+  h2="Unleashing the Power of Software Development"
+>
+  <img src={meta.heroImage} alt={"hero image"} width="100%" />
+</ContentSection>
+<ContentSection h2="Adventure filled with challenges">
+
+In this blog post, we will delve into the inspiring journey of self-taught developers, exploring the ups and downs, the valuable lessons learned, and the sheer joy of unleashing the power of software development.
+
+1. The Decision to Become a Self-Taught Developer:
+
+   Every journey begins with a single step. Share your personal story of why you decided to pursue software development as a self-taught developer. Was it a desire for a career change, a passion for technology, or a curiosity to create something new? Highlight the motivation that ignited your journey.
+
+2. Setting Goals and Creating a Roadmap:
+
+   When embarking on a self-taught journey, it's crucial to establish clear goals and create a roadmap for learning. Discuss the importance of setting realistic and achievable goals, breaking them down into smaller milestones, and utilizing various resources like online courses, tutorials, forums, and coding communities.
+
+3. Embracing the Learning Process:
+
+   Learning software development is a continuous process, and it's essential to embrace the learning curve. Share your experiences and the challenges you faced during the learning phase. Discuss the importance of patience, perseverance, and the ability to learn from mistakes. Encourage readers to approach setbacks as opportunities for growth.
+
+4. Building a Solid Foundation:
+
+   To become a proficient developer, a solid foundation is key. Discuss the fundamental concepts and technologies aspiring developers should focus on. Cover topics like programming languages (e.g., Python, JavaScript), algorithms, data structures, and software development methodologies. Highlight the significance of hands-on practice and building small projects to reinforce learning.
+
+5. Leveraging Online Resources:
+
+   In today's digital era, a vast array of online resources is available to self-taught developers. Explore the different platforms, websites, and online communities that can accelerate the learning process. Discuss the benefits of interactive coding platforms, online coding challenges, and collaborative coding platforms where developers can connect with others and learn together.
+
+6. Building a Portfolio and Showcasing Skills:
+
+   As a self-taught developer, building a strong portfolio becomes essential. Discuss the significance of creating projects that showcase your skills and highlight your progress. Offer tips on selecting relevant projects, contributing to open-source projects, and creating an online presence through platforms like GitHub or personal websites.
+
+7. Networking and Mentoring:
+
+   Building a network of like-minded individuals and finding mentors can greatly enhance a self-taught developer's journey. Discuss the benefits of attending meetups, joining developer communities, and participating in hackathons. Encourage readers to seek guidance from experienced developers and share their knowledge with others.
+
+8. Navigating the Job Market:
+
+   Finding job opportunities as a self-taught developer can be both exciting and daunting. Share tips on preparing a compelling resume, showcasing relevant projects during interviews, and emphasizing problem-solving abilities and self-motivation. Discuss alternative paths such as freelancing, remote work, or creating your own software products.
+
+Conclusion:
+Being a self-taught developer is a remarkable journey of growth, resilience, and innovation. Encourage readers to embrace the challenges, celebrate their achievements, and keep pushing the boundaries of their knowledge. Remind them that the journey of a self-taught developer is a lifelong adventure, filled with endless opportunities to shape the world through the power of software development.
+
+</ContentSection>
+export default ({ children }) => (
+  <ProjectLayout meta={meta}>{children}</ProjectLayout>
+);

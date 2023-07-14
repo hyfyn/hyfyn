@@ -6,6 +6,7 @@ import {
   ScreenWrap,
   Grid,
   Link,
+  Section,
 } from "app/components/atoms";
 import { ContentSection, ProjectThumbnail } from "app/components/molecules";
 import projectsData from "data/projects.json";
@@ -17,14 +18,14 @@ const HomePage: FC = () => {
   });
   return (
     <>
-      {/* <Logo /> */}
-      <ScreenWrap>
-        <IntroTitle>
-          Welcome To <span>HyFyn</span>
-        </IntroTitle>
-        <ScrollIndicator className={display ? "display" : ""} />
-      </ScreenWrap>
-
+      <Section>
+        <ScreenWrap>
+          <IntroTitle>
+            Welcome To <span>HyFyn</span>
+          </IntroTitle>
+          <ScrollIndicator className={display ? "display" : ""} />
+        </ScreenWrap>
+      </Section>
       <ContentSection
         h1="Created by Matt Sobieray"
         h2="Software Engineer and Team Lead at Kinsta"
@@ -34,11 +35,10 @@ const HomePage: FC = () => {
           <Grid displayType="flex">
             <Avatar />
             <p>
-              👋 Welcome to HyFyn. HyFyn was a company I started while I was
-              working as a freelance developer and designer. The name was
-              because people would greet my dog "Hi, Finn" and it sounded like
-              they were saying hyphen (HyFyn). The company is no more, but I
-              kept the moniker for my online identity.
+              👋 Welcome to HyFyn, a company I started while I was freelancing.
+              The name was because people would greet my dog "Hi, Finn" and it
+              sounded like they were saying hyphen (HyFyn). I have closed the
+              company, but I kept the moniker for my online identity.
             </p>
           </Grid>
         </div>
@@ -47,6 +47,11 @@ const HomePage: FC = () => {
           focused on full-stack TypeScript with Next.js, GraphQL, and Prisma. I
           am also infatuated with Web3 and taking baby steps into lower level
           languages by learning Rust with Solana.
+        </p>
+        <p>
+          In the past I did design work and primarily used WordPress to build
+          sites. I have a strong background with WordPress and some experience
+          with PHP but I mostly focus on JS nowadays.
         </p>
       </ContentSection>
       <ContentSection h1="Prior Work" h2="A Decade of Learning">
@@ -72,8 +77,8 @@ const HomePage: FC = () => {
             }
           })}
         </Grid>
-        {/* <Link href="/projects">All Prior Work 👉</Link> */}
-        <i>more projects coming soon - 👆 my past 4 years</i>
+        <Link href="/projects">All Work 👉</Link>
+        {/* <i>more projects coming soon - 👆 my past 4 years</i> */}
       </ContentSection>
       <ContentSection h1="Blog" h2="Coming Soon">
         {/* <BlogTumbnails amount={3}> */}

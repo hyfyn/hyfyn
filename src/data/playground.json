@@ -1,0 +1,9 @@
+[{ 
+  "title": "Canvas", 
+  "subTitle": "Drawing with Canvas", 
+  "slug": "canvas",
+  "description": "playing around with the Canvas API", 
+  "imagePath": "/images/projects/kinsta/create_env_thumbnail.png",
+  "isFeatured": true,
+  "isDisplayed": true
+}]

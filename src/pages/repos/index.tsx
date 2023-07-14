@@ -7,6 +7,7 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import RepoList from "app/components/molecules/repoList";
+import { Section } from "app/components/atoms";
 
 console.log(process.env.NEXT_PUBLIC_GITHUB_TOKEN);
 
@@ -32,9 +33,11 @@ const client = new ApolloClient({
 });
 
 const Repos: FC = () => (
-  <ApolloProvider client={client}>
-    <RepoList />
-  </ApolloProvider>
+  <Section>
+    <ApolloProvider client={client}>
+      <RepoList />
+    </ApolloProvider>
+  </Section>
 );
 
 export default Repos;
