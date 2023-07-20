@@ -5,21 +5,26 @@ export const FixedContainer = styled.div(
   ({ theme }) => css`
     position: relative;
     flex: 0;
-    transition: flex ease 0.2s;
+    transition: flex ease 0.3s;
     background-color: ${theme.color.black};
     border-right: 0px solid ${theme.color.gold};
+    min-width: 0px;
+    max-width: 0px;
+    transition: all ease 0.1s;
     &.open {
       min-width: 150px;
       max-width: 150px;
       border-right-width: 1px;
       flex: 1;
     }
+    &.open nav {
+      width: auto;
+    }
   `
 );
 export const StyledNav = styled.nav(
   ({ theme }) => css`
     position: fixed;
-
     z-index: 99;
     width: 0;
     canvas {
@@ -30,7 +35,6 @@ export const StyledNav = styled.nav(
     div.nav_slide {
       position: relative;
       right: 100vw;
-      transition: right 0.3s ease;
       &.open {
         right: 0;
         .nav_items {

@@ -4,7 +4,7 @@ import * as Styled from "../css/main";
 
 const MainLayout: FC = ({ children }) => (
   <div className="display-flex">
-    {process.env.NODE_ENV === "development" ? <Nav /> : null}
+    <Nav />
     <Styled.MainLayout>{children}</Styled.MainLayout>
   </div>
 );
