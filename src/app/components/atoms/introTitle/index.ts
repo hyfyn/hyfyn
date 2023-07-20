@@ -1,12 +1,16 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { linearGradient, growAnimation, slideAnimation } from "app/styles/common-css";
+import {
+  linearGradient,
+  growAnimation,
+  slideAnimation,
+} from "app/styles/common-css";
 
 export const IntroTitle = styled.h1(
   ({ theme }) => css`
-    position: absolute;
-    font-size: 4em;
-    animation: ${growAnimation} 1s ease;
+    position: relative;
+    font-size: 3em;
+    margin-top: 1em;
     ${linearGradient(theme.color.white, theme.color.black)}
     span {
       position: absolute;

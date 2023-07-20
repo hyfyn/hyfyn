@@ -7,22 +7,22 @@ import { OList, UList, DList } from "./styles";
 export interface ListItemsProps {
   type: "ul" | "ol" | "dl";
   items: any[];
-  classes?: string;
+  className?: string;
 }
 
-const ListItems: FC<ListItemsProps> = ({ classes, type, items }) => {
+const ListItems: FC<ListItemsProps> = ({ className, type, items }) => {
   // use the builder pattern for creating all variations of lists (OL, UL, DL)
   const listItems = items.map((item, i) => <li key={i + uid()}>{item}</li>);
   let listType;
   switch (type) {
     case "dl":
-      listType = <DList className={`dl ${classes}`}>{listItems}</DList>;
+      listType = <DList className={`dl ${className}`}>{listItems}</DList>;
       break;
     case "ol":
-      listType = <OList className={`ol ${classes}`}>{listItems}</OList>;
+      listType = <OList className={`ol ${className}`}>{listItems}</OList>;
       break;
     default:
-      listType = <UList className={`ul ${classes}`}>{listItems}</UList>;
+      listType = <UList className={`ul ${className}`}>{listItems}</UList>;
       break;
   }
   return listType;

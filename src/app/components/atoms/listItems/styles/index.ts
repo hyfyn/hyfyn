@@ -1,0 +1,26 @@
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
+
+const base = css`
+  list-style: none;
+  margin: 0;
+  li {
+    display: inline;
+    padding: 0.5rem;
+  }
+`;
+
+const UList = styled.ul(base, ({ theme }) => css``);
+
+const DList = styled.dl(base, ({ theme }) => css``);
+
+const OList = styled.ol(
+  ({ theme }) => css`
+    li {
+      text-align: left;
+      text-transform: capitalize;
+    }
+  `
+);
+
+export { OList, DList, UList };

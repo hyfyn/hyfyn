@@ -1,0 +1,9 @@
+[{ 
+  "title": "The Self-Taught Developer ", 
+  "subTitle": "Lessons Learned", 
+  "slug": "self-taught",
+  "description": "Embracing the challenges of learning software development", 
+  "imagePath": "/images/projects/kinsta/create_env_thumbnail.png",
+  "isFeatured": true,
+  "isDisplayed": true
+}]

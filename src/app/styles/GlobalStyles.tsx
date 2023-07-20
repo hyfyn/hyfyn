@@ -16,6 +16,9 @@ const reset = css`
     margin: 0.5em 0;
     font-weight: 100;
   }
+  .display-flex {
+    display: flex;
+  }
 `;
 
 export const GlobalStyles = () => <Global styles={reset} />;
