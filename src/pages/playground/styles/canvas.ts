@@ -27,3 +27,5 @@ export const Canvas = styled.canvas(
     border: 2px solid white;
   `
 );
+
+export default Controls;
