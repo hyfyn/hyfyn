@@ -12,19 +12,14 @@ import { ContentSection, ProjectThumbnail } from "app/components/molecules";
 import projectsData from "data/projects.json";
 import { Avatar } from "app/components/atoms";
 const HomePage: FC = () => {
-  const [display, setDisplay] = useState(false);
-  useEffect(() => {
-    setTimeout(() => setDisplay(true), 3000);
-  });
   return (
     <>
       <Section>
-        <ScreenWrap>
-          <IntroTitle>
-            Welcome To <span>HyFyn</span>
-          </IntroTitle>
-          <ScrollIndicator className={display ? "display" : ""} />
-        </ScreenWrap>
+        {/* <ScreenWrap> */}
+        <IntroTitle>
+          Welcome To <span>HyFyn</span>
+        </IntroTitle>
+        {/* </ScreenWrap> */}
       </Section>
       <ContentSection
         h1="Created by Matt Sobieray"
