@@ -1,6 +1,6 @@
 # Hi, I'm Matt
 
-I'm a senior software engineer in Colorado. I've spent over a decade building for the web, starting from PHP, WordPress, and MySQL and moving onto React, TypeScript, Node, PostgresSQL, and now Go and BigQuery. I have deployed applications on GCP, CloudFlare, Heroku, Supabase, Vercel, and while working with WordPress, Kinsta and WPEngine. I've Worked with Stripe for payment processings and Adobe Target for A/B testing. 
+I'm a senior software engineer in Colorado. I've spent over a decade building for the web, starting with the LAMP stack and WordPress, and moving onto React, TypeScript, Node, PostgresSQL, and now Go and BigQuery. I have deployed applications on GCP, CloudFlare, Heroku, Supabase, Vercel, and while working with WordPress, Kinsta and WPEngine. I've Worked with Stripe for payment processings and Adobe Target for A/B testing. 
 
 I like owning a project from the design doc through release, and using data to drive iterations. I like to learn new languages and tools; continuously growing and building my skills as an engineer.
 
