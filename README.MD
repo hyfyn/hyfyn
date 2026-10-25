@@ -13,7 +13,7 @@ I'm a senior software engineer in Colorado. I've spent over a decade building fo
 ## Before that
 
 - **Team Lead at [Kinsta](https://kinsta.com/):** worked with React, TypeScript, GraphQL, Ansible, PHP, GCP, and Stripe. Worked on the companies Application Performance Monitoring app and was the team lead responsible for building a staging environments add-on that generated over $25K in new monthly recurring revenue. Led a team to replace a Node app used for uptime monitoring over to the ELK stack to meet our SLA and scale to checking 100,000+ sites every 2 minutes.
-- **Frontend Engineer at [HomeAdvisor][https://www.homeadvisor.com/]:** worked with Vue.js, Java, and MSSQL in a Micoservice architecture. Led the frontend on a concierge booking flow. Helped migrated legacy apps built with an in-house JS framework to Vue.js.
+- **Frontend Engineer at [HomeAdvisor](https://www.homeadvisor.com/):** worked with Vue.js, Java, and MSSQL in a Micoservice architecture. Led the frontend on a concierge booking flow. Helped migrated legacy apps built with an in-house JS framework to Vue.js.
 - **Software Engineer at [Monigle](https://www.monigle.com/):** worked on the BEAM brand asset management app. Building custom front ends that sat on top of a custom CMS built with PHP, Yii, Slim PHP, Vue.js, jQuery, CSS, and HTML. Helped bring a React and Laravel app built by an external development agency in-house.
 - **HyFyn**: started my own company and took on clients building WordPress sites and full-stack web apps with Laravel and Vue.js. Transitioned to full-stack JS with the release of ES2015.
 - **WordPress:** worked at advertising and design agencies, and a tech strartup building WordPress sites with jQuery, PHP, and MySQL.
