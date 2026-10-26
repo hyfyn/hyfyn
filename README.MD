@@ -9,6 +9,7 @@ I like owning a project from the design doc through release, and using data to d
 ### Senior Software Engineer at [Quantum Metric](https://www.quantummetric.com)
 
 React · TypeScript · MobX · Node · GO · BigQuery
+
 Customer-managed encryption keys, our event data on BigQuery, and the config service and schema validation services behind it.
 
 ---
@@ -16,6 +17,7 @@ Customer-managed encryption keys, our event data on BigQuery, and the config ser
 ### [TopKnot Pro](https://pro.topknotwedding.com)
 
 React · TypeScript · Tailwind · Supabase · Postgres · React Query · CloudFlare
+
 A SaaS app for bridal hair stylists that started as a tool for my wife's business. 
 
 ---
