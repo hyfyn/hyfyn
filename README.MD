@@ -24,7 +24,7 @@ A SaaS app for bridal hair stylists that started as a tool for my wife's busines
 
 ### Cairn
 
-Next.js 16 · TypeScript · Docker · Postgres · Drizzle · Tailwind · Domain Driven Design
+Next.js 16 · TypeScript · Docker · Postgres · Drizzle · Tailwind · Vercel · Domain Driven Design
 
 A project management tool that uses a website's sitemap or its architecture to tie tasks to the underlying structure of the website. 
  
@@ -54,9 +54,11 @@ Worked on the BEAM brand asset management app. Building custom front ends that s
 
 ---
 
-### HyFyn
+### Founded [HyFyn](https://hyfyn.com
 
 Started my own company and took on clients building WordPress sites and full-stack web apps with Laravel and Vue.js. Transitioned to full-stack JS with the release of ES2015.
+
+---
 
 ### WordPress
 
