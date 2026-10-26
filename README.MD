@@ -4,7 +4,7 @@ I'm a senior software engineer in Colorado. I've spent over a decade building fo
 
 I like owning a project from the design doc through release, and using data to drive iterations. I like to learn new languages and tools; continuously growing and building my skills as an engineer.
 
-## What I'm working on
+## Current Employment
 
 ### Senior Software Engineer at [Quantum Metric](https://www.quantummetric.com)
 
@@ -12,7 +12,7 @@ React · TypeScript · MobX · Node · GO · BigQuery
 
 Customer-managed encryption keys, our event data on BigQuery, and the config service and schema validation services behind it.
 
----
+## Side Projects
 
 ### [TopKnot Pro](https://pro.topknotwedding.com)
 
@@ -27,15 +27,7 @@ A SaaS app for bridal hair stylists that started as a tool for my wife's busines
 Next.js 16 · TypeScript · Docker · Postgres · Drizzle · Tailwind · Domain Driven Design
 
 A project management tool that uses a website's sitemap or its architecture to tie tasks to the underlying structure of the website. 
-
----
  
-### My Hobbies
-
-building out a camper van · DIY house projects · traveling · hiking · mountain biking · snowboarding · fishing · hanging with my wife and our dog Waffles.
-
----
-
 ## Previous Experience
 
 ### Team Lead at [Kinsta](https://kinsta.com/)
@@ -58,21 +50,25 @@ Led the frontend on a concierge booking flow. Helped migrated legacy apps built 
 
 PHP · Yii · Slim PHP · Vue.js · jQuery · CSS · HTML
 
-worked on the BEAM brand asset management app. Building custom front ends that sat on top of a custom CMS. Helped bring a React and Laravel app built by an external development agency in-house.
+Worked on the BEAM brand asset management app. Building custom front ends that sat on top of a custom CMS. Helped bring a React and Laravel app built by an external development agency in-house.
 
 ---
 
 ### HyFyn
 
-started my own company and took on clients building WordPress sites and full-stack web apps with Laravel and Vue.js. Transitioned to full-stack JS with the release of ES2015.
+Started my own company and took on clients building WordPress sites and full-stack web apps with Laravel and Vue.js. Transitioned to full-stack JS with the release of ES2015.
 
 ### WordPress
 
-worked at advertising and design agencies, and a tech strartup building WordPress sites with jQuery, PHP, and MySQL.
+Worked at advertising and design agencies, and a tech strartup building WordPress sites with jQuery, PHP, and MySQL.
 
 ## What I like to work with
 
 TypeScript · React · Next.js · GraphQL · REST · Node.js · Go · PostgreSQL · Redis · GCP · Docker · Claude Code
+
+## My Hobbies
+
+Building a camper van · DIY house projects · Traveling · Hiking · Mountain biking · Snowboarding · Fishing · Hanging with my wife and our dog Waffles.
 
 ## Connect with me
 
