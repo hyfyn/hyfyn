@@ -54,7 +54,7 @@ Worked on the BEAM brand asset management app. Building custom front ends that s
 
 ---
 
-### Founded [HyFyn](https://hyfyn.com
+### Founded [HyFyn](https://hyfyn.com)
 
 Started my own company and took on clients building WordPress sites and full-stack web apps with Laravel and Vue.js. Transitioned to full-stack JS with the release of ES2015.
 
