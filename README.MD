@@ -30,9 +30,11 @@ A project management tool that uses a website's sitemap or its architecture to t
 
 ---
  
-### Off the clock
+### My Hobbies
 
 building out a camper van · DIY house projects · traveling · hiking · mountain biking · snowboarding · fishing · hanging with my wife and our dog Waffles.
+
+---
 
 ## Previous Experience
 
